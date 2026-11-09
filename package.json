@@ -1,0 +1,20 @@
+{
+  "name": "@xiaoyuclaw/dsh-wake-source",
+  "version": "0.1.0",
+  "description": "DSH plugin: let external scripts wake a live agent through a local HTTP endpoint, without an API key.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["dsh", "deepseek-harness", "cordis", "plugin", "agent", "wake", "scheduler"],
+  "exports": { ".": "./index.js" },
+  "files": ["index.js", "cordis.patch.yml", "README.md", "LICENSE"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "display": {
+      "title": { "zh": "本地唤醒源", "en": "Local wake source" },
+      "description": {
+        "zh": "监听本机 HTTP 端口，把外部事件注入成一条用户消息，从而唤醒已有会话的 agent；没有活着的会话时会新建一个。不需要 API key。",
+        "en": "Listens on a local HTTP port and injects external events as user messages to wake a live agent (or create one). No API key required."
+      }
+    }
+  }
+}

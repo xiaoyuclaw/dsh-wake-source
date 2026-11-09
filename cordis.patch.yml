@@ -1,0 +1,15 @@
+# 示例配置：装到自己的 profile 后按需改。
+# identityRoot 不写就跟随 `dsh` 的启动目录；别人用的时候改成自己的身份根。
+- insert:
+    - id: wake-source
+      name: '@xiaoyuclaw/dsh-wake-source'
+      config:
+        host: '127.0.0.1'
+        port: 8737
+        token: 'change-me'
+        # identityRoot: /path/to/your/agent/workspace
+        # agentPreset: standard
+        # 新建会话没有模型可继承，必须显式给（按你 profile 的默认值填）
+        # provider: deepseek-account
+        # model: deepseek-flash
+        # reasoningEffort: high
